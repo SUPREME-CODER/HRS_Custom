@@ -8,13 +8,12 @@ if(isset($_POST['search'])){
     $three =  isset($_POST['three']) ? 1 : 0;
     $two =  isset($_POST['two']) ? 1 : 0;
     $one =  isset($_POST['one']) ? 1 : 0;
-    $rating = 0;
-    if($one==1){$rating=1;}
-    if($two==1){$rating=2;}
-    if($three==1){$rating=3;}
-    if($four==1){$rating=4;}
-    if($five==1){$rating=5;}
-    echo "$rating";
+    // $rating = 0;
+    // if($one==1){$rating=1;}
+    // if($two==1){$rating=2;}
+    // if($three==1){$rating=3;}
+    // if($four==1){$rating=4;}
+    // if($five==1){$rating=5;}
 
     
     $query = "SELECT * FROM hostel WHERE city='$city' and fees<=$fees and rating>=$rating";
@@ -54,10 +53,6 @@ if(isset($_POST['search'])){
         if($reading==1){array_push($facility,"Reading Room");}
 
 ?>
-<head>
-<link rel="stylesheet" type="text/css" href="css/hostel_entire_details.css">
-<link rel="stylesheet" type="text/css" href="css/hostel_page_1.css">
-</head>
     <div id="div" class="container">
         <div class="row">
                 <div class="col-md-12 margin ">
@@ -103,7 +98,7 @@ if(isset($_POST['search'])){
 
 else{
     ?>
-    <p style='color:red'>No Hostels found...</p>
+    <p style='color:red' >No Hostels found...</p>
 <?php }
 
 }

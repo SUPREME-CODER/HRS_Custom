@@ -21,7 +21,6 @@ if(mysqli_connect_error()){
     <title>Hostel Management</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/hostel_page_1.css">
     <link rel="stylesheet" type="text/css" href="css/trevo.css">
     
     <link href="https://fonts.googleapis.com/css?family=Acme|Berkshire+Swash|Lobster|PT+Sans+Narrow|Patua+One" rel="stylesheet">
@@ -31,12 +30,82 @@ if(mysqli_connect_error()){
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<style>
+    .first-image {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background: url('img/log.jpg');
+    z-index: 1;
+}
+
+.navbar-img {
+    text-shadow: 0.5px 0.5px #D79E30;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    color: rgb(209, 171, 96) !important;
+}
+
+.navbar-img img {
+    float: left;
+    height: 45px;
+    width: 50px;
+}
+
+.navbar-color li a {
+    font-family: 'Acme', sans-serif;
+    font-size: 20px;
+    color: #D79E30 !important;
+}
+
+footer#main-footer {
+    background: #262626;
+    padding: 60px 0 30px 0;
+    color: #e6e6e6;
+    font-size: 11px;
+    line-height: 1.4em;
+}
+
+.text-4 {
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    font-size: 28px;
+}
+
+.text-3 {
+    padding-top: 20px;
+    color: #FAFAFA;
+    font-size: 13px;
+}
+
+.icon-list {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.icon-color {
+    color: #FF8F00;
+}
+
+.icon-list li {
+    float: left;
+    padding: 10px;
+}
+
+.labell {
+    font-weight: bold;
+}
+</style>
+
+
+
 </head>
 
 
 <body>
-    <div class="navbar-color">
-        <nav class="navbar navbar-expand-lg navbar-light static-top" style="background: rgba(0,0,0,0.7);">
+<div class="first-image navbar-color">
+        <nav class="navbar navbar-expand-lg navbar-light static-top" style="background:rgba(0,0,0,0.7);">
             <div class="container">
                 <a class="navbar-brand navbar-img" href="home_page_1.php">
                     <img src="img/hotel.png">&nbsp; Hostel Guru
@@ -101,7 +170,7 @@ if(mysqli_connect_error()){
                 </div>
             </div>
         </nav>
-    </div>
+    
     <!---------------------------------------------------------------------------------------------------------------------------------------------->
     <br>
     <div class="container">
@@ -134,7 +203,7 @@ if(mysqli_connect_error()){
                               
                                   <label class="star star-5" for="star-5"></label>
                               
-                                  <input class="star star-4 " name="four" id="star-4" type="radio" />
+                                    <input class="star star-4 " name="four" id="star-4" type="radio" />
                               
                                   <label class="star star-4" for="star-4"></label>
                               
@@ -154,8 +223,7 @@ if(mysqli_connect_error()){
                     </div>
                 </div>
 
-
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <div class="" data-date-format="MM d, D">
                         <div class="row">
                             <div class="col-md-6">
@@ -182,7 +250,7 @@ if(mysqli_connect_error()){
 
 
     <?php include('hostel_display.php');?>
-    
+    </div>
 
     <footer id="main-footer">
         <div class="container">
@@ -246,7 +314,7 @@ if(mysqli_connect_error()){
         </div>
     </footer>
 
-    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 

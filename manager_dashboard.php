@@ -101,10 +101,9 @@ function w3_close() {
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="font-family:'Cambria';">Top</button>
 <script>
-//Get the button
+
 var mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -115,47 +114,24 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
 </script>
 
 <div class="w3-sidebar w3-light-grey w3-bar-block w3-border-right" id="mySidebar" style="display:none; height:320px; width:17%; position:fixed; top:135px; left:10px;">
   	<h3 class="w3-bar-item" style="font-family:'Cambria'">MENU</h3>
   	<form action="" method="POST">
 	  	<input  type="submit" class="w3-bar-item w3-button" style="font-family:'Cambria'" name="student_dets" value="STUDENT DETAILS"></input>
-	  	<input  type="submit" class="w3-bar-item w3-button" style="font-family:'Cambria'" name="student_apps" value="STUDENT APPLICATIONS"></input>
 	  	<input  type="submit" class="w3-bar-item w3-button" style="font-family:'Cambria'" name="hostel_dets" value="HOSTEL DETAILS"></input>
-	  	<div class="w3-dropdown-hover">
-	  		<button  class="w3-bar-item w3-button" style="font-family:'Cambria'">CHARTS</button>
-	  		<div class="w3-dropdown-content w3-bar-block w3-border">
-      			<input type="submit" class="w3-bar-item w3-button" style="font-family:'Cambria'; margin-left:30px; width:99%" name="SC" value="BAR CHART"></input>
-      			<input type="submit" class="w3-bar-item w3-button" style="font-family:'Cambria'; margin-left:30px;" name="BC" value="SPLINE CHART"></input>
-    		</div>
-	  	</div>
 	</form>
 </div>
-
-<?php
-    if (!empty($_POST['BC']))
-    {
-        include('spline_charts.php');
-    }
-    else if(!empty($_POST['SC']))
-    {
-        include('bar_charts.php');
-    }
-?>
 <?php
 	if (!empty($_POST['student_dets']))
 	{
 		include('student_dets.php');
-	}
-	else if (!empty($_POST['student_apps']))
-	{
-		include('student_apps.php');
 	}
 	else if (!empty($_POST['hostel_dets']))
 	{
